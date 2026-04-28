@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeelSense | Plataforma de Análise Emocional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    
+    <div class="animated-bg"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Feel<span>Sense</span></span>
+                    <span class="logo-tag">AI Emotional Intelligence</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="home.html" class="nav-link active">Início</a>
+                <a href="dahsboard.html" class="nav-link">Dashboard</a>
+                <a href="solucoes.html" class="nav-link">Soluções</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-outline" id="demoBtn">Demonstração</button>
+                <button class="btn-primary-glow" id="startNowBtn">Começar Agora</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-chart-line"></i>
+                <span>Plataforma de Análise Emocional Avançada</span>
+            </div>
+            <h1 class="hero-title">
+                Entenda as emoções em
+                <span class="gradient-text">tempo real</span>
+                <div class="title-decoration"></div>
+            </h1>
+            <p class="hero-description">
+                FeelSense utiliza inteligência artificial para analisar expressões faciais, 
+                fornecendo insights profundos sobre o engajamento emocional dos seus usuários.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-hero-primary" id="heroStartBtn">
+                    <i class="fas fa-play"></i> Iniciar Análise
+                    <span class="btn-glow"></span>
+                </button>
+                <button class="btn-hero-secondary">
+                    <i class="fas fa-video"></i> Ver Demonstração
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="98">0</span>
+                    <span class="stat-label">% de precisão</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="7">0</span>
+                    <span class="stat-label">emoções detectadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1000">0</span>
+                    <span class="stat-label">+ clientes ativos</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <i class="fas fa-smile-wink"></i>
+                <span>+55% Engajamento</span>
+                <div class="card-glow"></div>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fas fa-chart-line"></i>
+                <span>Insights em tempo real</span>
+            </div>
+            <div class="floating-card card-3">
+                <i class="fas fa-robot"></i>
+                <span>IA Avançada</span>
+            </div>
+            <div class="hero-sphere"></div>
+            <div class="hero-wave"></div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="section-header">
+            <span class="section-badge">Recursos</span>
+            <h2>Tecnologia de ponta para<br>análise emocional</h2>
+            <p>Descubra como o FeelSense transforma dados faciais em insights valiosos</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-delay="0">
+                <div class="feature-icon">
+                    <i class="fas fa-face-smile"></i>
+                </div>
+                <h3>7 Emoções Detectadas</h3>
+                <p>Raiva, Nojo, Medo, Felicidade, Tristeza, Surpresa e Neutro com alta precisão</p>
+                <div class="feature-progress"></div>
+            </div>
+            <div class="feature-card" data-delay="0.1">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-scatter"></i>
+                </div>
+                <h3>Gráficos Dinâmicos</h3>
+                <p>Visualização em tempo real da distribuição emocional com Chart.js</p>
+                <div class="feature-progress"></div>
+            </div>
+            <div class="feature-card" data-delay="0.2">
+                <div class="feature-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Relatório Detalhado</h3>
+                <p>Relatórios completos com análises e recomendações personalizadas</p>
+                <div class="feature-progress"></div>
+            </div>
+            <div class="feature-card" data-delay="0.3">
+                <div class="feature-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Dashboard Premium</h3>
+                <p>Interface moderna com visual inspirado nos melhores dashboards</p>
+                <div class="feature-progress"></div>
+            </div>
+        </div>
+    </section>
+    <section class="how-it-works">
+        <div class="section-header">
+            <span class="section-badge">Processo</span>
+            <h2>Como funciona a análise?</h2>
+            <p>Três passos simples para obter insights valiosos</p>
+        </div>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-icon"><i class="fas fa-camera"></i></div>
+                <h3>Conecte a câmera</h3>
+                <p>Permita o acesso à webcam e inicie a captura em tempo real</p>
+                <div class="step-connector"></div>
+            </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-icon"><i class="fas fa-microchip"></i></div>
+                <h3>IA processa</h3>
+                <p>Nossa inteligência artificial analisa cada frame capturado</p>
+                <div class="step-connector"></div>
+            </div>
+            <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Resultados instantâneos</h3>
+                <p>Visualize gráficos, métricas e gere relatórios completos</p>
+            </div>
+        </div>
+    </section>
+    <section class="emotions-showcase">
+        <div class="section-header">
+            <span class="section-badge">Emoções</span>
+            <h2>Mapa de Emoções Humanas</h2>
+            <p>Identificamos as principais expressões faciais</p>
+        </div>
+        <div class="emotions-grid">
+            <div class="emotion-chip" data-emotion="happy" style="--emoji-color: #ffd93d;">😊 Feliz</div>
+            <div class="emotion-chip" data-emotion="sad" style="--emoji-color: #6c91bb;">😢 Triste</div>
+            <div class="emotion-chip" data-emotion="angry" style="--emoji-color: #ff6b6b;">😠 Raiva</div>
+            <div class="emotion-chip" data-emotion="fear" style="--emoji-color: #a78bfa;">😨 Medo</div>
+            <div class="emotion-chip" data-emotion="surprise" style="--emoji-color: #fbbf24;">😲 Surpresa</div>
+            <div class="emotion-chip" data-emotion="disgust" style="--emoji-color: #82ca9d;">😖 Nojo</div>
+            <div class="emotion-chip" data-emotion="neutral" style="--emoji-color: #94a3b8;">😐 Neutro</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-brain"></i>
+                <span>Feel<span>Sense</span></span>
+                <p>AI Emotional Intelligence Platform</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Produto</h4>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">Preços</a>
+                </div>
+                <div class="link-group">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Carreiras</a>
+                </div>
+                <div class="link-group">
+                    <h4>Suporte</h4>
+                    <a href="#">Documentação</a>
+                    <a href="#">API</a>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FeelSense. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>

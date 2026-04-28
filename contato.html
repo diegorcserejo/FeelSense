@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeelSense | Contato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/contato.css">
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    <div class="animated-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Feel<span>Sense</span></span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="home.html" class="nav-link">Início</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="solucoes.html" class="nav-link">Soluções</a>
+                <a href="contato.html" class="nav-link active">Contato</a>
+            </div>
+            <a href="dashboard.html" class="btn-demo">
+                <i class="fas fa-play"></i> Testar Agora
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero-contato">
+        <div class="hero-badge">
+            <i class="fas fa-headset"></i> Fale Conosco
+        </div>
+        <h1 class="hero-title">Vamos conversar<br>sobre o seu projeto</h1>
+        <p class="hero-subtitle">Preencha o formulário ou entre em contato diretamente<br>com nosso time de especialistas.</p>
+    </section>
+
+    <div class="contato-grid">
+        <div class="form-container">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nome completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-phone"></i> Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(11) 99999-9999">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-comment"></i> Mensagem</label>
+                    <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Enviar mensagem
+                    <span class="btn-glow"></span>
+                </button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+
+        <div class="info-container">
+            <div class="info-card">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Endereço</h3>
+                <p>Av. Paulista, 1000<br>Bela Vista, São Paulo - SP<br>01310-100</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                <h3>E-mail</h3>
+                <p>contato@feelsense.com<br>suporte@feelsense.com</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <h3>Telefone</h3>
+                <p>(11) 4002-8922<br>(11) 98765-4321</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                <h3>Horário de Atendimento</h3>
+                <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="social-section">
+        <div class="social-header">
+            <h3>Conecte-se conosco</h3>
+            <p>Acompanhe novidades e conteúdos exclusivos</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-card">
+            <h3><i class="fas fa-map"></i> Nossa localização</h3>
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197397510776!2d-46.658861!3d-23.564616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="300" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-brain"></i>
+                <span>Feel<span>Sense</span></span>
+                <p>AI Emotional Intelligence Platform</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Produto</h4>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="solucoes.html">Soluções</a>
+                </div>
+                <div class="link-group">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="link-group">
+                    <h4>Suporte</h4>
+                    <a href="contato.html">Contato</a>
+                    <a href="#">Documentação</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FeelSense. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/contato.js"></script>
+</body>
+</html>
