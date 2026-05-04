@@ -225,7 +225,7 @@ printRelatorioBtn.addEventListener('click', () => window.print());
 window.addEventListener('load', () => {
     createParticles();
     setTimeout(() => {
-        let nome = prompt("Nome da pessoa para o relatório:", "Cliente Dashboard");
+        let nome = prompt("Nome para o relatório:", "Pessoa 1");
         if(nome) relatorioPessoa.textContent = nome;
     }, 500);
 });
