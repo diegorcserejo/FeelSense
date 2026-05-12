@@ -117,19 +117,19 @@ async function loadFaceApiModels() {
     emotionResult.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando modelos de IA...';
     
     try {
-        // Carrega os modelos da pasta /models
-        await faceapi.nets.tinyFaceDetector.loadFromUri('/models');
-        await faceapi.nets.faceExpressionNet.loadFromUri('/models');
+        const modelUrl = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights';
+        
+        await faceapi.nets.tinyFaceDetector.loadFromUri(modelUrl);
+        await faceapi.nets.faceExpressionNet.loadFromUri(modelUrl);
         
         modelsLoaded = true;
         emotionResult.innerHTML = '<i class="fas fa-check-circle"></i> Modelos prontos! Clique em Iniciar';
         console.log('✅ Modelos Face-api carregados com sucesso!');
     } catch (error) {
         console.error('❌ Erro ao carregar modelos:', error);
-        emotionResult.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erro ao carregar IA. Verifique a pasta /models';
+        emotionResult.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erro ao carregar IA. Verifique sua conexão com a internet.';
     }
 }
-
 // ============ INICIAR WEBCAM ============
 async function startWebcam() {
     try {
