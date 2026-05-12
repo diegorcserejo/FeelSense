@@ -126,61 +126,143 @@
 
         <div id="relatorio-container" class="relatorio-premium">
             <div class="relatorio-inner">
+                <!-- Cabeçalho com gradiente e ícone animado -->
                 <div class="relatorio-header-premium">
-                    <h2><i class="fas fa-file-contract"></i> Relatório de Análise Emocional</h2>
-                    <div class="report-id">#FEEL-2026</div>
+                    <div class="header-left">
+                        <div class="report-icon-glow">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h2><i class="fas fa-file-alt"></i> Relatório de Análise Emocional</h2>
+                            <p class="report-subtitle">FeelSense AI · Deep Emotion Mapping</p>
+                        </div>
+                    </div>
+                    <div class="report-id-badge">
+                        <i class="fas fa-qrcode"></i>
+                        <span id="relatorio-id">#FEEL-2026-042</span>
+                    </div>
                 </div>
                 
                 <div class="relatorio-body">
-                    <div class="info-row">
-                        <div><i class="fas fa-user"></i> <strong>Paciente / Usuário:</strong> <span id="relatorio-pessoa">[Nome]</span></div>
-                        <div><i class="fas fa-calendar"></i> <strong>Data da Análise:</strong> <span id="relatorio-data"></span></div>
-                        <div><i class="fas fa-hourglass-half"></i> <strong>Duração:</strong> <span id="relatorio-duracao"></span></div>
-                        <div><i class="fas fa-database"></i> <strong>Amostras:</strong> <span id="relatorio-amostras"></span></div>
+                    <!-- Cards de info com design moderno -->
+                    <div class="info-cards-grid">
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-user-circle"></i></div>
+                            <div class="info-card-content">
+                                <span class="info-label">Paciente / Usuário</span>
+                                <strong id="relatorio-pessoa">[Nome do Participante]</strong>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="info-card-content">
+                                <span class="info-label">Data da Análise</span>
+                                <strong id="relatorio-data">--/--/----</strong>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <div class="info-card-content">
+                                <span class="info-label">Duração</span>
+                                <strong id="relatorio-duracao">00:00</strong>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-icon"><i class="fas fa-database"></i></div>
+                            <div class="info-card-content">
+                                <span class="info-label">Amostras Coletadas</span>
+                                <strong id="relatorio-amostras">0</strong>
+                            </div>
+                        </div>
                     </div>
                     
-                    <h3> Resumo das Emoções</h3>
+                    <!-- Seção Resumo de Emoções com gráfico de barras minimalista -->
+                    <div class="section-title">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Panorama Emocional</h3>
+                        <span class="title-line"></span>
+                    </div>
+                    
                     <div class="emotion-summary-cards">
                         <div class="sum-card primary">
-                            <span>Predominante</span>
+                            <div class="sum-icon"><i class="fas fa-crown"></i></div>
+                            <span>Emoção Predominante</span>
                             <strong id="relatorio-predominante">-</strong>
-                            <small id="relatorio-predominante-perc">-</small>
+                            <div class="perc-bar">
+                                <div class="perc-fill" id="predominante-fill" style="width: 0%"></div>
+                            </div>
+                            <small id="relatorio-predominante-perc">0% dominância</small>
                         </div>
-                        <div class="sum-card">
-                            <span>Secundária</span>
+                        <div class="sum-card secondary">
+                            <div class="sum-icon"><i class="fas fa-waveform"></i></div>
+                            <span>Emoção Secundária</span>
                             <strong id="relatorio-secundaria">-</strong>
-                            <small id="relatorio-secundaria-perc">-</small>
+                            <div class="perc-bar">
+                                <div class="perc-fill secondary-fill" id="secundaria-fill" style="width: 0%"></div>
+                            </div>
+                            <small id="relatorio-secundaria-perc">0% frequência</small>
                         </div>
-                        <div class="sum-card">
+                        <div class="sum-card rare">
+                            <div class="sum-icon"><i class="fas fa-leaf"></i></div>
                             <span>Menos Frequente</span>
                             <strong id="relatorio-menos-frequente">-</strong>
-                            <small id="relatorio-menos-frequente-perc">-</small>
+                            <div class="perc-bar">
+                                <div class="perc-fill rare-fill" id="menos-fill" style="width: 0%"></div>
+                            </div>
+                            <small id="relatorio-menos-frequente-perc">0% ocorrência</small>
                         </div>
                     </div>
                     
-                    <h3> Distribuição Detalhada</h3>
-                    <div id="relatorio-distribuicao" class="distribuicao-grid"></div>
-                    
-                    <h3> Análise e Interpretação</h3>
-                    <p id="relatorio-analise" class="analysis-text"></p>
-                    
-                    <div class="recommendation-box">
-                        <h4><i class="fas fa-lightbulb"></i> Recomendações</h4>
-                        <p id="relatorio-recomendacoes"></p>
+                    <!-- Distribuição Detalhada com tags elegantes -->
+                    <div class="section-title">
+                        <i class="fas fa-chart-simple"></i>
+                        <h3>Distribuição Detalhada</h3>
+                        <span class="title-line"></span>
                     </div>
                     
-                    <div class="signature-area">
+                    <div id="relatorio-distribuicao" class="distribuicao-grid-modern"></div>
+                    
+                    <!-- Análise e Interpretação com card especial -->
+                    <div class="section-title">
+                        <i class="fas fa-brain"></i>
+                        <h3>Análise Cognitiva e Comportamental</h3>
+                        <span class="title-line"></span>
+                    </div>
+                    
+                    <div class="analysis-glass-card">
+                        <div class="analysis-quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p id="relatorio-analise" class="analysis-text-premium"></p>
+                    </div>
+                    
+                    <!-- Recomendações com layout inspirador -->
+                    <div class="recommendation-premium-box">
+                        <div class="rec-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Recomendações Estratégicas</h4>
+                        </div>
+                        <p id="relatorio-recomendacoes"></p>
+                        <div class="rec-footer-tag">
+                            <i class="fas fa-robot"></i> Gerado por IA FeelSense
+                        </div>
+                    </div>
+                    
+                    <!-- Assinatura e rodapé com botão de impressão estilizado -->
+                    <div class="signature-area-premium">
                         <div class="signature-line" id="signature-container"></div>
-                        <div class="report-footer">
-                            <span>Relatório gerado em: <span id="relatorio-geracao"></span></span>
-                            <button id="print-relatorio-btn" class="print-mini"><i class="fas fa-print"></i> Imprimir</button>
+                        <div class="report-footer-premium">
+                            <div class="footer-left">
+                                <i class="fas fa-fingerprint"></i>
+                                <span>Relatório gerado em: <strong id="relatorio-geracao"></strong></span>
+                            </div>
+                            <button id="print-relatorio-btn" class="print-premium-btn">
+                                <i class="fas fa-print"></i> Imprimir Relatório
+                                <span class="btn-ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
     <canvas id="hidden-canvas" width="640" height="480" style="display:none;"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
