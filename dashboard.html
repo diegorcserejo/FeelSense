@@ -2,14 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>FeelSense | Painel de Análise Emocional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     <div class="particles-container" id="particles"></div>
-    
     <div class="animated-bg"></div>
 
     <div class="dashboard-container">
@@ -58,7 +57,6 @@
                 <div class="chart-container">
                     <canvas id="emotion-chart" width="600" height="280"></canvas>
                 </div>
-                
                 <div class="insight-mini glow-insight">
                     <div class="insight-icon">
                         <i class="fas fa-chart-line"></i>
@@ -91,7 +89,6 @@
                         <span class="kpi-trend"><i class="fas fa-brain"></i> tempo real</span>
                     </div>
                 </div>
-                
                 <div class="top-reseller">
                     <i class="fas fa-microphone-alt"></i>
                     <div>
@@ -109,7 +106,6 @@
                 <div class="controls-group">
                     <button id="start-btn" class="btn-primary btn-glow">
                         <i class="fas fa-play"></i> Iniciar Análise
-                        <span class="btn-glow-effect"></span>
                     </button>
                     <button id="stop-btn" class="btn-secondary" disabled>
                         <i class="fas fa-stop"></i> Parar
@@ -126,7 +122,6 @@
 
         <div id="relatorio-container" class="relatorio-premium">
             <div class="relatorio-inner">
-                <!-- Cabeçalho com gradiente e ícone animado -->
                 <div class="relatorio-header-premium">
                     <div class="header-left">
                         <div class="report-icon-glow">
@@ -144,7 +139,6 @@
                 </div>
                 
                 <div class="relatorio-body">
-                    <!-- Cards de info com design moderno -->
                     <div class="info-cards-grid">
                         <div class="info-card">
                             <div class="info-card-icon"><i class="fas fa-user-circle"></i></div>
@@ -176,11 +170,9 @@
                         </div>
                     </div>
                     
-                    <!-- Seção Resumo de Emoções com gráfico de barras minimalista -->
                     <div class="section-title">
                         <i class="fas fa-chart-pie"></i>
                         <h3>Panorama Emocional</h3>
-                        <span class="title-line"></span>
                     </div>
                     
                     <div class="emotion-summary-cards">
@@ -213,20 +205,16 @@
                         </div>
                     </div>
                     
-                    <!-- Distribuição Detalhada com tags elegantes -->
                     <div class="section-title">
                         <i class="fas fa-chart-simple"></i>
                         <h3>Distribuição Detalhada</h3>
-                        <span class="title-line"></span>
                     </div>
                     
                     <div id="relatorio-distribuicao" class="distribuicao-grid-modern"></div>
                     
-                    <!-- Análise e Interpretação com card especial -->
                     <div class="section-title">
                         <i class="fas fa-brain"></i>
-                        <h3>Análise Cognitiva e Comportamental</h3>
-                        <span class="title-line"></span>
+                        <h3>Análise Cognitiva</h3>
                     </div>
                     
                     <div class="analysis-glass-card">
@@ -234,7 +222,6 @@
                         <p id="relatorio-analise" class="analysis-text-premium"></p>
                     </div>
                     
-                    <!-- Recomendações com layout inspirador -->
                     <div class="recommendation-premium-box">
                         <div class="rec-header">
                             <i class="fas fa-lightbulb"></i>
@@ -246,7 +233,6 @@
                         </div>
                     </div>
                     
-                    <!-- Assinatura e rodapé com botão de impressão estilizado -->
                     <div class="signature-area-premium">
                         <div class="signature-line" id="signature-container"></div>
                         <div class="report-footer-premium">
@@ -255,17 +241,17 @@
                                 <span>Relatório gerado em: <strong id="relatorio-geracao"></strong></span>
                             </div>
                             <button id="print-relatorio-btn" class="print-premium-btn">
-                                <i class="fas fa-print"></i> Imprimir Relatório
-                                <span class="btn-ripple"></span>
+                                <i class="fas fa-print"></i> Imprimir
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <canvas id="hidden-canvas" width="640" height="480" style="display:none;"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
