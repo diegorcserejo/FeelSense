@@ -996,3 +996,27 @@ button:disabled {
     animation: fadeSlide 0.3s ease backwards;
 }
 
+/* Responsive */
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    body {
+        padding: 20px 16px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    .particles-container, .animated-bg, .dashboard-grid, .controls-card, .back-home-btn {
+        display: none;
+    }
+    .relatorio-premium {
+        display: block;
+        background: white;
+        color: black;
+    }
+}
+
