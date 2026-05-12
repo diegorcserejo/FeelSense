@@ -518,6 +518,15 @@ button:disabled {
     gap: 8px;
 }
 
+/* FORÇA O RELATÓRIO A FICAR EM UMA ÚNICA FOLHA */
+.relatorio-premium,
+.relatorio-inner,
+.relatorio-body {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    overflow: visible;
+}
+
 /* ========== RELATÓRIO PREMIUM ========== */
 .relatorio-premium {
     display: none;
