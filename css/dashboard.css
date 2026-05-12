@@ -547,793 +547,358 @@ button:disabled {
     padding: 32px 36px;
 }
 
-/* Cabeçalho moderno */
-.relatorio-header-premium {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 24px;
-    margin-bottom: 28px;
-    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
-    flex-wrap: wrap;
-    gap: 20px;
+/* ========== VERSÃO COMPACTADA DO RELATÓRIO - CABE EM 1 FOLHA ========== */
+
+/* Estilo base do relatório mais compacto */
+.relatorio-premium {
+    margin-top: 24px;
+    border-radius: 32px;
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.relatorio-inner {
+    padding: 20px 28px !important;
+}
+
+/* Cabeçalho mais compacto */
+.relatorio-header-premium {
+    padding-bottom: 16px !important;
+    margin-bottom: 16px !important;
+    gap: 12px;
 }
 
 .report-icon-glow {
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, #6366f1, #c084fc);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
-    animation: softPulse 3s infinite;
-}
-
-@keyframes softPulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 8px 20px rgba(99,102,241,0.4); }
-    50% { transform: scale(1.02); box-shadow: 0 12px 28px rgba(139,92,246,0.7); }
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 22px !important;
 }
 
 .relatorio-header-premium h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(120deg, #fff, #c084fc, #a78bfa);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: -0.3px;
+    font-size: 1.3rem !important;
 }
 
 .report-subtitle {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    margin-top: 6px;
-    letter-spacing: 0.3px;
+    font-size: 0.7rem !important;
+    margin-top: 3px !important;
 }
 
 .report-id-badge {
-    background: rgba(139, 92, 246, 0.2);
-    backdrop-filter: blur(8px);
-    padding: 8px 18px;
-    border-radius: 60px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    border: 1px solid rgba(139, 92, 246, 0.4);
+    padding: 5px 14px !important;
+    font-size: 0.7rem !important;
 }
 
-/* Grid de informações */
+/* Grid de informações - mais compacto */
 .info-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 18px;
-    margin-bottom: 32px;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
 }
 
 .info-card {
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 24px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    transition: all 0.25s;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.info-card:hover {
-    background: rgba(99, 102, 241, 0.15);
-    transform: translateY(-3px);
-    border-color: rgba(139, 92, 246, 0.4);
+    padding: 10px 16px !important;
+    gap: 12px !important;
 }
 
 .info-card-icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(145deg, #6366f120, #8b5cf620);
-    border-radius: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #c084fc;
-}
-
-.info-card-content {
-    flex: 1;
-}
-
-.info-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #94a3b8;
-    letter-spacing: 0.5px;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 18px !important;
 }
 
 .info-card-content strong {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #f1f5f9;
-    display: block;
-    margin-top: 4px;
+    font-size: 0.9rem !important;
+    margin-top: 2px !important;
 }
 
-/* Seção título */
+.info-label {
+    font-size: 0.6rem !important;
+}
+
+/* Títulos das seções - mais compactos */
 .section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 28px 0 20px 0;
+    margin: 16px 0 12px 0 !important;
+    gap: 8px;
 }
 
 .section-title i {
-    font-size: 1.4rem;
-    color: #c084fc;
-    background: rgba(139,92,246,0.2);
-    padding: 8px;
-    border-radius: 14px;
+    font-size: 1rem !important;
+    padding: 5px !important;
 }
 
 .section-title h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 0;
+    font-size: 1rem !important;
 }
 
-.title-line {
-    flex: 1;
-    height: 2px;
-    background: linear-gradient(90deg, #8b5cf6, transparent);
-    margin-left: 12px;
-}
-
-/* Cards de resumo emocional */
+/* Cards de resumo emocional - reduzidos */
 .emotion-summary-cards {
-    display: flex;
-    gap: 24px;
-    margin: 16px 0 24px 0;
-    flex-wrap: wrap;
+    gap: 12px !important;
+    margin: 8px 0 16px 0 !important;
 }
 
 .sum-card {
-    flex: 1;
-    background: rgba(20, 28, 45, 0.7);
-    backdrop-filter: blur(4px);
-    border-radius: 28px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    transition: all 0.3s;
-}
-
-.sum-card:hover {
-    transform: translateY(-5px);
-    border-color: #8b5cf6;
-    box-shadow: 0 15px 30px -12px rgba(99,102,241,0.3);
-}
-
-.sum-card.primary {
-    background: linear-gradient(145deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.1));
-    border-left: 4px solid #c084fc;
+    padding: 12px 16px !important;
 }
 
 .sum-icon {
-    font-size: 28px;
-    color: #c084fc;
-    margin-bottom: 12px;
+    font-size: 20px !important;
+    margin-bottom: 6px !important;
 }
 
 .sum-card span {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #94a3b8;
-    letter-spacing: 0.5px;
+    font-size: 0.65rem !important;
 }
 
 .sum-card strong {
-    font-size: 2rem;
-    font-weight: 800;
-    display: block;
-    margin: 8px 0;
-    background: linear-gradient(135deg, #fff, #e9d5ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    font-size: 1.3rem !important;
+    margin: 4px 0 !important;
 }
 
 .perc-bar {
-    height: 6px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    margin: 12px 0 8px;
-    overflow: hidden;
-}
-
-.perc-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #8b5cf6, #c084fc);
-    border-radius: 10px;
-    width: 0%;
-    transition: width 0.5s ease;
-}
-
-.perc-fill.secondary-fill {
-    background: linear-gradient(90deg, #3b82f6, #60a5fa);
-}
-
-.perc-fill.rare-fill {
-    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    height: 4px !important;
+    margin: 6px 0 4px !important;
 }
 
 .sum-card small {
-    font-size: 0.7rem;
-    color: #cbd5e1;
+    font-size: 0.6rem !important;
 }
 
-/* Distribuição detalhada moderna */
+/* Distribuição detalhada - mais compacta */
 .distribuicao-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 14px;
-    background: rgba(15, 23, 42, 0.5);
-    padding: 20px;
-    border-radius: 32px;
-    margin: 12px 0 8px;
+    gap: 8px !important;
+    padding: 12px 16px !important;
+    margin: 8px 0 4px !important;
 }
 
 .emotion-tag {
-    background: rgba(99, 102, 241, 0.2);
-    border-radius: 60px;
-    padding: 12px 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
-    backdrop-filter: blur(4px);
-    transition: all 0.2s;
-    border: 1px solid rgba(139,92,246,0.3);
-}
-
-.emotion-tag:hover {
-    background: rgba(139,92,246,0.3);
-    transform: scale(1.02);
-}
-
-.emotion-name {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    padding: 8px 12px !important;
+    font-size: 0.75rem !important;
 }
 
 .emotion-name i {
-    width: 24px;
-    color: #c084fc;
+    width: 18px !important;
+    font-size: 0.8rem !important;
 }
 
 .emotion-percent {
-    font-weight: 700;
-    color: #e2e8f0;
-    background: #1e293b;
-    padding: 2px 10px;
-    border-radius: 40px;
-    font-size: 0.8rem;
+    font-size: 0.7rem !important;
+    padding: 2px 8px !important;
 }
 
-/* Análise glass card */
+/* Análise glass card - mais compacto */
 .analysis-glass-card {
-    background: rgba(15, 25, 45, 0.6);
-    backdrop-filter: blur(12px);
-    border-radius: 28px;
-    padding: 28px 32px;
-    margin: 16px 0 20px;
-    position: relative;
-    border: 1px solid rgba(139,92,246,0.25);
-    box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3);
+    padding: 16px 20px !important;
+    margin: 8px 0 12px !important;
 }
 
 .analysis-quote-icon {
-    position: absolute;
-    top: 20px;
-    right: 28px;
-    font-size: 42px;
-    color: rgba(139,92,246,0.2);
+    font-size: 28px !important;
+    top: 12px !important;
+    right: 16px !important;
 }
 
 .analysis-text-premium {
-    font-size: 1rem;
-    line-height: 1.65;
-    color: #e2e8f0;
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
 }
 
-/* Recomendação premium */
+/* Recomendação - mais compacta */
 .recommendation-premium-box {
-    background: linear-gradient(125deg, rgba(251, 146, 60, 0.1), rgba(234, 179, 8, 0.05));
-    border-radius: 28px;
-    padding: 24px 28px;
-    margin: 24px 0 28px;
-    border-left: 5px solid #fb923c;
-    transition: 0.2s;
+    padding: 14px 18px !important;
+    margin: 12px 0 16px !important;
 }
 
 .rec-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
 }
 
 .rec-header i {
-    font-size: 26px;
-    color: #fbbf24;
+    font-size: 18px !important;
 }
 
 .rec-header h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0;
-    color: #fed7aa;
+    font-size: 0.9rem !important;
 }
 
 .recommendation-premium-box p {
-    color: #fde68a;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    margin-bottom: 18px;
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
 }
 
 .rec-footer-tag {
-    font-size: 0.7rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #94a3b8;
-    border-top: 1px solid rgba(251,146,60,0.3);
-    padding-top: 14px;
-    margin-top: 8px;
+    font-size: 0.6rem !important;
+    padding-top: 8px !important;
 }
 
-/* Rodapé */
+/* Rodapé - mais compacto */
 .signature-area-premium {
-    margin-top: 28px;
-    border-top: 1px solid rgba(139, 92, 246, 0.25);
-    padding-top: 24px;
+    margin-top: 16px !important;
+    padding-top: 14px !important;
 }
 
 .signature-line {
-    height: 1px;
-    background: linear-gradient(90deg, #8b5cf6, transparent);
-    width: 120px;
-    margin-bottom: 20px;
-}
-
-.report-footer-premium {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    width: 80px !important;
+    margin-bottom: 12px !important;
 }
 
 .footer-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.8rem;
-    color: #94a3b8;
+    font-size: 0.65rem !important;
 }
 
 .print-premium-btn {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border: none;
-    padding: 10px 24px;
-    border-radius: 40px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.8rem;
-    transition: 0.2s;
-    position: relative;
-    overflow: hidden;
+    padding: 6px 18px !important;
+    font-size: 0.7rem !important;
 }
 
-.print-premium-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(99,102,241,0.5);
-    filter: brightness(1.05);
-}
-
-.btn-ripple {
-    position: absolute;
-    background: rgba(255,255,255,0.3);
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 0.6s linear;
-}
-
-/* Responsividade */
-@media (max-width: 780px) {
+/* ========== VERSÃO PARA IMPRESSÃO - CABE EM 1 FOLHA ========== */
+@media print {
+    /* Remove elementos desnecessários na impressão */
+    .particles-container,
+    .animated-bg,
+    .dashboard-grid,
+    .controls-card,
+    .back-home-btn,
+    .header-stats .stat-badge,
+    .btn-glow-effect,
+    .scan-line {
+        display: none !important;
+    }
+    
+    /* Configuração da página para caber em 1 folha */
+    @page {
+        size: A4;
+        margin: 0.8cm;
+    }
+    
+    body {
+        padding: 0 !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .dashboard-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Estilo do relatório para impressão */
+    .relatorio-premium {
+        display: block !important;
+        background: white !important;
+        backdrop-filter: none !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        border-radius: 12px !important;
+    }
+    
     .relatorio-inner {
-        padding: 20px;
-    }
-    .emotion-summary-cards {
-        flex-direction: column;
-    }
-    .info-cards-grid {
-        grid-template-columns: 1fr;
-    }
-    .section-title h3 {
-        font-size: 1.1rem;
-    }
-}
-
-/* Animações extras */
-@keyframes fadeSlide {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.distribuicao-grid-modern .emotion-tag {
-    animation: fadeSlide 0.3s ease backwards;
-}
-
-/* ========== CORREÇÕES DE RESPONSIVIDADE PARA O RELATÓRIO EM MOBILE ========== */
-
-/* Ajustes gerais para telas muito pequenas */
-@media (max-width: 640px) {
-    .relatorio-inner {
-        padding: 20px 16px !important;
+        padding: 16px 20px !important;
     }
     
-    /* Cabeçalho do relatório */
-    .relatorio-header-premium {
-        flex-direction: column;
-        align-items: flex-start !important;
-        gap: 16px;
-    }
-    
-    .header-left {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    
-    .report-icon-glow {
-        width: 48px;
-        height: 48px;
-        font-size: 22px;
-    }
-    
+    /* Cores escuras viram pretas para impressão */
     .relatorio-header-premium h2 {
-        font-size: 1.3rem !important;
+        background: none !important;
+        color: #1e293b !important;
+        -webkit-background-clip: unset !important;
     }
     
-    .report-subtitle {
-        font-size: 0.7rem;
-    }
-    
-    .report-id-badge {
-        align-self: flex-start;
-        font-size: 0.75rem;
-        padding: 6px 14px;
-    }
-    
-    /* Cards de informação */
-    .info-cards-grid {
-        grid-template-columns: 1fr !important;
-        gap: 12px;
-    }
-    
-    .info-card {
-        padding: 12px 16px;
-    }
-    
-    .info-card-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-    
-    .info-card-content strong {
-        font-size: 0.95rem;
-    }
-    
-    .info-label {
-        font-size: 0.65rem;
-    }
-    
-    /* Títulos das seções */
-    .section-title {
-        margin: 20px 0 16px 0;
-        flex-wrap: wrap;
-    }
-    
-    .section-title h3 {
-        font-size: 1rem !important;
-    }
-    
-    .section-title i {
-        font-size: 1.1rem;
-        padding: 6px;
-    }
-    
-    .title-line {
-        display: none; /* Remove a linha decorativa em mobile */
-    }
-    
-    /* Cards de resumo emocional */
-    .emotion-summary-cards {
-        flex-direction: column !important;
-        gap: 14px;
-    }
-    
-    .sum-card {
-        padding: 16px;
+    .info-card,
+    .sum-card,
+    .analysis-glass-card,
+    .recommendation-premium-box,
+    .distribuicao-grid-modern {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        backdrop-filter: none !important;
     }
     
     .sum-card strong {
-        font-size: 1.5rem !important;
+        background: none !important;
+        color: #1e293b !important;
     }
     
-    .sum-icon {
-        font-size: 22px;
+    .kpi-value {
+        background: none !important;
+        color: #1e293b !important;
     }
     
-    .perc-bar {
-        height: 5px;
-    }
-    
-    /* Grid de distribuição detalhada */
-    .distribuicao-grid-modern {
-        grid-template-columns: 1fr !important;
-        gap: 10px;
-        padding: 16px;
-    }
-    
-    .emotion-tag {
-        padding: 10px 14px;
-        font-size: 0.85rem;
-    }
-    
-    .emotion-name i {
-        width: 20px;
-        font-size: 0.9rem;
-    }
-    
-    .emotion-percent {
-        font-size: 0.75rem;
-        padding: 2px 8px;
-    }
-    
-    /* Análise glass card */
-    .analysis-glass-card {
-        padding: 20px !important;
-        margin: 12px 0 16px;
-    }
-    
-    .analysis-quote-icon {
-        font-size: 30px;
-        top: 12px;
-        right: 16px;
-    }
-    
-    .analysis-text-premium {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-    
-    /* Recomendação box */
-    .recommendation-premium-box {
-        padding: 16px 20px !important;
-        margin: 16px 0 20px;
-    }
-    
-    .rec-header {
-        gap: 10px;
-    }
-    
-    .rec-header i {
-        font-size: 20px;
-    }
-    
-    .rec-header h4 {
-        font-size: 1rem;
-    }
-    
-    .recommendation-premium-box p {
-        font-size: 0.85rem;
-        line-height: 1.45;
-    }
-    
-    .rec-footer-tag {
-        font-size: 0.65rem;
-        padding-top: 10px;
-    }
-    
-    /* Rodapé */
-    .signature-area-premium {
-        margin-top: 20px;
-        padding-top: 18px;
-    }
-    
-    .signature-line {
-        width: 80px;
-        margin-bottom: 16px;
-    }
-    
-    .report-footer-premium {
-        flex-direction: column;
-        align-items: flex-start !important;
-        gap: 12px;
-    }
-    
-    .footer-left {
-        font-size: 0.7rem;
+    .info-card-icon,
+    .report-icon-glow {
+        background: #e2e8f0 !important;
+        color: #6366f1 !important;
     }
     
     .print-premium-btn {
-        width: 100%;
-        justify-content: center;
-        padding: 10px 16px;
-        font-size: 0.75rem;
-    }
-}
-
-/* Ajustes para tablets pequenos */
-@media (min-width: 641px) and (max-width: 900px) {
-    .relatorio-inner {
-        padding: 24px !important;
+        display: none !important;
     }
     
+    /* Garante que não haja quebra de página dentro do relatório */
+    .relatorio-premium {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    /* Compacta ainda mais para impressão */
     .info-cards-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .section-title {
+        margin: 8px 0 6px 0 !important;
     }
     
     .emotion-summary-cards {
-        gap: 16px;
-    }
-    
-    .distribuicao-grid-modern {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-    
-    .relatorio-header-premium h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Ajuste para telas muito pequenas (ex: iPhone SE) */
-@media (max-width: 380px) {
-    body {
-        padding: 16px 12px !important;
-    }
-    
-    .relatorio-inner {
-        padding: 16px 12px !important;
-    }
-    
-    .sum-card strong {
-        font-size: 1.3rem !important;
+        margin: 4px 0 8px 0 !important;
     }
     
     .analysis-glass-card {
+        margin: 6px 0 8px !important;
+        padding: 12px 16px !important;
+    }
+    
+    .recommendation-premium-box {
+        margin: 8px 0 12px !important;
+        padding: 10px 16px !important;
+    }
+    
+    .signature-area-premium {
+        margin-top: 8px !important;
+        padding-top: 8px !important;
+    }
+}
+
+/* ========== MOBILE - AINDA MAIS COMPACTO ========== */
+@media (max-width: 640px) {
+    .relatorio-inner {
         padding: 16px !important;
     }
     
-    .emotion-tag {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
+    .info-cards-grid {
+        gap: 8px !important;
+        margin-bottom: 16px !important;
     }
     
-    .emotion-name {
-        justify-content: center;
-    }
-    
-    .report-id-badge {
-        font-size: 0.7rem;
-        padding: 5px 12px;
-    }
-}
-
-/* Melhoria na rolagem em mobile */
-@media (max-width: 640px) {
-    .relatorio-premium {
-        border-radius: 32px;
-        margin-top: 20px;
-    }
-    
-    /* Evita que o relatório ultrapasse a largura */
-    .dashboard-container {
-        overflow-x: hidden;
-    }
-    
-    /* Ajuste das barras de percentual */
-    .perc-bar {
-        margin: 8px 0 6px;
-    }
-    
-    /* Melhor visual para os cards de informação em mobile */
     .info-card {
-        flex-direction: row;
-        align-items: center;
+        padding: 8px 12px !important;
     }
     
-    .info-card-content {
-        text-align: left;
+    .info-card-icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 16px !important;
+    }
+    
+    .sum-card strong {
+        font-size: 1.2rem !important;
+    }
+    
+    .analysis-glass-card {
+        padding: 12px 16px !important;
+    }
+    
+    .recommendation-premium-box {
+        padding: 12px 16px !important;
     }
 }
-
-/* Suporte para orientação landscape em mobile */
-@media (max-width: 900px) and (orientation: landscape) {
-    .emotion-summary-cards {
-        flex-direction: row !important;
-        flex-wrap: wrap;
-    }
-    
-    .sum-card {
-        min-width: calc(33% - 10px);
-    }
-    
-    .distribuicao-grid-modern {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-    
-    .relatorio-inner {
-        padding: 20px;
-    }
-}
-
-/* Animação suave para transições em mobile */
-.relatorio-premium,
-.relatorio-inner,
-.info-card,
-.sum-card,
-.emotion-tag {
-    transition: all 0.2s ease;
-}
-
-/* Ajuste de touch targets para mobile */
-@media (max-width: 640px) {
-    .print-premium-btn {
-        min-height: 44px; /* Tamanho mínimo para toque */
-    }
-    
-    .emotion-tag {
-        cursor: pointer;
-    }
-    
-    /* Remove hover effects que podem ser problemáticos em touch */
-    .info-card:hover,
-    .sum-card:hover,
-    .emotion-tag:hover {
-        transform: none;
-    }
-    
-    /* Mantém apenas o efeito active para feedback tátil */
-    .info-card:active,
-    .sum-card:active,
-    .emotion-tag:active {
-        transform: scale(0.98);
-        background: rgba(99, 102, 241, 0.25);
-    }
-}
-
