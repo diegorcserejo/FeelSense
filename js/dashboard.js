@@ -1,4 +1,4 @@
-// dashboard-engine.js - Lógica completa com animações e efeitos
+// Lógica com animações e efeitos
 const video = document.getElementById('webcam-video');
 const canvas = document.getElementById('hidden-canvas');
 const context = canvas.getContext('2d');
