@@ -996,27 +996,344 @@ button:disabled {
     animation: fadeSlide 0.3s ease backwards;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .dashboard-grid {
-        grid-template-columns: 1fr;
+/* ========== CORREÇÕES DE RESPONSIVIDADE PARA O RELATÓRIO EM MOBILE ========== */
+
+/* Ajustes gerais para telas muito pequenas */
+@media (max-width: 640px) {
+    .relatorio-inner {
+        padding: 20px 16px !important;
     }
-    body {
-        padding: 20px 16px;
+    
+    /* Cabeçalho do relatório */
+    .relatorio-header-premium {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 16px;
+    }
+    
+    .header-left {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .report-icon-glow {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+    
+    .relatorio-header-premium h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .report-subtitle {
+        font-size: 0.7rem;
+    }
+    
+    .report-id-badge {
+        align-self: flex-start;
+        font-size: 0.75rem;
+        padding: 6px 14px;
+    }
+    
+    /* Cards de informação */
+    .info-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+    
+    .info-card {
+        padding: 12px 16px;
+    }
+    
+    .info-card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .info-card-content strong {
+        font-size: 0.95rem;
+    }
+    
+    .info-label {
+        font-size: 0.65rem;
+    }
+    
+    /* Títulos das seções */
+    .section-title {
+        margin: 20px 0 16px 0;
+        flex-wrap: wrap;
+    }
+    
+    .section-title h3 {
+        font-size: 1rem !important;
+    }
+    
+    .section-title i {
+        font-size: 1.1rem;
+        padding: 6px;
+    }
+    
+    .title-line {
+        display: none; /* Remove a linha decorativa em mobile */
+    }
+    
+    /* Cards de resumo emocional */
+    .emotion-summary-cards {
+        flex-direction: column !important;
+        gap: 14px;
+    }
+    
+    .sum-card {
+        padding: 16px;
+    }
+    
+    .sum-card strong {
+        font-size: 1.5rem !important;
+    }
+    
+    .sum-icon {
+        font-size: 22px;
+    }
+    
+    .perc-bar {
+        height: 5px;
+    }
+    
+    /* Grid de distribuição detalhada */
+    .distribuicao-grid-modern {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+        padding: 16px;
+    }
+    
+    .emotion-tag {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .emotion-name i {
+        width: 20px;
+        font-size: 0.9rem;
+    }
+    
+    .emotion-percent {
+        font-size: 0.75rem;
+        padding: 2px 8px;
+    }
+    
+    /* Análise glass card */
+    .analysis-glass-card {
+        padding: 20px !important;
+        margin: 12px 0 16px;
+    }
+    
+    .analysis-quote-icon {
+        font-size: 30px;
+        top: 12px;
+        right: 16px;
+    }
+    
+    .analysis-text-premium {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    /* Recomendação box */
+    .recommendation-premium-box {
+        padding: 16px 20px !important;
+        margin: 16px 0 20px;
+    }
+    
+    .rec-header {
+        gap: 10px;
+    }
+    
+    .rec-header i {
+        font-size: 20px;
+    }
+    
+    .rec-header h4 {
+        font-size: 1rem;
+    }
+    
+    .recommendation-premium-box p {
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+    
+    .rec-footer-tag {
+        font-size: 0.65rem;
+        padding-top: 10px;
+    }
+    
+    /* Rodapé */
+    .signature-area-premium {
+        margin-top: 20px;
+        padding-top: 18px;
+    }
+    
+    .signature-line {
+        width: 80px;
+        margin-bottom: 16px;
+    }
+    
+    .report-footer-premium {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px;
+    }
+    
+    .footer-left {
+        font-size: 0.7rem;
+    }
+    
+    .print-premium-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.75rem;
     }
 }
 
-@media print {
+/* Ajustes para tablets pequenos */
+@media (min-width: 641px) and (max-width: 900px) {
+    .relatorio-inner {
+        padding: 24px !important;
+    }
+    
+    .info-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .emotion-summary-cards {
+        gap: 16px;
+    }
+    
+    .distribuicao-grid-modern {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .relatorio-header-premium h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajuste para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 380px) {
     body {
-        background: white;
+        padding: 16px 12px !important;
     }
-    .particles-container, .animated-bg, .dashboard-grid, .controls-card, .back-home-btn {
-        display: none;
+    
+    .relatorio-inner {
+        padding: 16px 12px !important;
     }
+    
+    .sum-card strong {
+        font-size: 1.3rem !important;
+    }
+    
+    .analysis-glass-card {
+        padding: 16px !important;
+    }
+    
+    .emotion-tag {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .emotion-name {
+        justify-content: center;
+    }
+    
+    .report-id-badge {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+}
+
+/* Melhoria na rolagem em mobile */
+@media (max-width: 640px) {
     .relatorio-premium {
-        display: block;
-        background: white;
-        color: black;
+        border-radius: 32px;
+        margin-top: 20px;
+    }
+    
+    /* Evita que o relatório ultrapasse a largura */
+    .dashboard-container {
+        overflow-x: hidden;
+    }
+    
+    /* Ajuste das barras de percentual */
+    .perc-bar {
+        margin: 8px 0 6px;
+    }
+    
+    /* Melhor visual para os cards de informação em mobile */
+    .info-card {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .info-card-content {
+        text-align: left;
+    }
+}
+
+/* Suporte para orientação landscape em mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+    .emotion-summary-cards {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+    
+    .sum-card {
+        min-width: calc(33% - 10px);
+    }
+    
+    .distribuicao-grid-modern {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .relatorio-inner {
+        padding: 20px;
+    }
+}
+
+/* Animação suave para transições em mobile */
+.relatorio-premium,
+.relatorio-inner,
+.info-card,
+.sum-card,
+.emotion-tag {
+    transition: all 0.2s ease;
+}
+
+/* Ajuste de touch targets para mobile */
+@media (max-width: 640px) {
+    .print-premium-btn {
+        min-height: 44px; /* Tamanho mínimo para toque */
+    }
+    
+    .emotion-tag {
+        cursor: pointer;
+    }
+    
+    /* Remove hover effects que podem ser problemáticos em touch */
+    .info-card:hover,
+    .sum-card:hover,
+    .emotion-tag:hover {
+        transform: none;
+    }
+    
+    /* Mantém apenas o efeito active para feedback tátil */
+    .info-card:active,
+    .sum-card:active,
+    .emotion-tag:active {
+        transform: scale(0.98);
+        background: rgba(99, 102, 241, 0.25);
     }
 }
 
