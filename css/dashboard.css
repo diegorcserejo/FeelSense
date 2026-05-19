@@ -806,4 +806,41 @@ button:disabled {
     .sum-card strong {
         font-size: 1rem !important;
     }
+       .emotion-tag {
+        background: #eee;
+        border: 1px solid #ccc;
+    }
+    .emotion-percent {
+        background: #ddd;
+        color: #333;
+    }
+    .analysis-glass-card {
+        background: #f9f9f9;
+        border: 1px solid #ccc;
+    }
+    .analysis-text-premium {
+        color: #333;
+    }
+    .recommendation-premium-box {
+        background: #fef3e8;
+        border-left: 4px solid #fb923c;
+    }
+    .recommendation-premium-box p {
+        color: #333;
+    }
+    .report-id-badge {
+        background: #eee;
+        border: 1px solid #ccc;
+        color: #333;
+    }
+    .footer-left, .rec-footer-tag {
+        color: #666;
+    }
+    html, body {
+        height: auto;
+        overflow: visible;
+    }
+    .dashboard-container {
+        max-width: 100%;
+    }
 }
