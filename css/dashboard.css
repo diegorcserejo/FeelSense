@@ -835,26 +835,15 @@ button:disabled {
     margin-top: 2px;
 }
 
-/* ASSINATURA - ULTRA COMPACTA */
-.signature-area-premium {
-    margin-top: 6px;
-    border-top: 1px solid rgba(139, 92, 246, 0.25);
-    padding-top: 6px;
-}
-
-.signature-line {
-    height: 1px;
-    background: linear-gradient(90deg, #8b5cf6, transparent);
-    width: 60px;
-    margin-bottom: 4px;
-}
-
 .report-footer-premium {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(139, 92, 246, 0.25);
 }
 
 .footer-left {
@@ -878,6 +867,12 @@ button:disabled {
     gap: 4px;
     font-size: 0.55rem;
     transition: 0.2s;
+}
+
+.print-premium-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(99,102,241,0.5);
+    filter: brightness(1.05);
 }
 
 /* RESPONSIVIDADE */

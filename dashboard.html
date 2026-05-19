@@ -234,22 +234,19 @@
                         </div>
                     </div>
                     
-                    <div class="signature-area-premium">
-                        <div class="signature-line" id="signature-container"></div>
-                        <div class="report-footer-premium">
-                            <div class="footer-left">
-                                <i class="fas fa-fingerprint"></i>
-                                <span>Relatório gerado em: <strong id="relatorio-geracao"></strong></span>
-                            </div>
-                            <button id="print-relatorio-btn" class="print-premium-btn">
-                                <i class="fas fa-print"></i> Imprimir
-                            </button>
+                    <!-- RODAPÉ APENAS COM BOTÃO IMPRIMIR (SEM ASSINATURA) -->
+                    <div class="report-footer-premium">
+                        <div class="footer-left">
+                            <i class="fas fa-fingerprint"></i>
+                            <span>Relatório gerado em: <strong id="relatorio-geracao"></strong></span>
                         </div>
+                        <button id="print-relatorio-btn" class="print-premium-btn">
+                            <i class="fas fa-print"></i> Imprimir
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <canvas id="hidden-canvas" width="640" height="480" style="display:none;"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

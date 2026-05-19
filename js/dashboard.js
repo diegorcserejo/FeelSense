@@ -25,7 +25,6 @@ const relatorioDistribuicao = document.getElementById('relatorio-distribuicao');
 const relatorioAnalise = document.getElementById('relatorio-analise');
 const relatorioRecomendacoes = document.getElementById('relatorio-recomendacoes');
 const relatorioGeracao = document.getElementById('relatorio-geracao');
-const signatureContainer = document.getElementById('signature-container');
 
 const kpiSamples = document.getElementById('kpi-samples');
 const kpiEngagement = document.getElementById('kpi-engagement');
@@ -218,7 +217,6 @@ function generateRelatorio() {
     
     relatorioRecomendacoes.innerHTML = recText;
     
-    signatureContainer.innerHTML = `<div style="font-family:'Brush Script MT', cursive; font-size:26px; background:linear-gradient(135deg,#c084fc,#8b5cf6); -webkit-background-clip:text; background-clip:text; color:transparent;">Dr. FeelSense IA</div><div style="font-size:11px; color:#94a3b8;">Analista do Sistema | CRM/Digital: FSE-2026</div>`;
     relatorioContainer.style.display = 'block';
     relatorioContainer.scrollIntoView({ behavior: 'smooth' });
 }
@@ -231,7 +229,7 @@ printRelatorioBtn.addEventListener('click', () => window.print());
 window.addEventListener('load', () => {
     createParticles();
     setTimeout(() => {
-        let nome = prompt("Nome para o relatório:", "Usuário FeelSense");
+        let nome = prompt("Nome para o relatório:", "Usuário");
         if(nome && nome.trim()) relatorioPessoa.textContent = nome;
     }, 500);
 });
