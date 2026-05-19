@@ -1,4 +1,3 @@
-/* dashboard-styles.css - Estilo premium com animações e cores vibrantes */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +15,6 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap');
 
-/* Animated Background */
 .animated-bg {
     position: fixed;
     top: 0;
@@ -33,7 +31,6 @@ body {
     50% { opacity: 0.8; background-position: 100% 50%; }
 }
 
-/* Particles */
 .particles-container {
     position: fixed;
     top: 0;
@@ -52,23 +49,12 @@ body {
 }
 
 @keyframes floatParticle {
-    0% {
-        transform: translateY(0) translateX(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.5;
-    }
-    90% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(-100vh) translateX(50px);
-        opacity: 0;
-    }
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    10% { opacity: 0.5; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
 }
 
-/* Container principal */
 .dashboard-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -76,7 +62,6 @@ body {
     z-index: 1;
 }
 
-/* Header com animação */
 .header-premium {
     display: flex;
     justify-content: space-between;
@@ -89,14 +74,8 @@ body {
 }
 
 @keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .logo-area {
@@ -133,15 +112,8 @@ body {
     color: transparent;
 }
 
-.logo-text h1 span {
-    font-weight: 400;
-    color: #8b5cf6;
-}
-
-.logo-text p {
-    font-size: 11px;
-    color: #94a3b8;
-}
+.logo-text h1 span { font-weight: 400; color: #8b5cf6; }
+.logo-text p { font-size: 11px; color: #94a3b8; }
 
 .header-stats {
     display: flex;
@@ -182,7 +154,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Grid */
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -190,7 +161,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Cards com glassmorphism e animação */
 .dashboard-card {
     background: rgba(20, 25, 45, 0.7);
     backdrop-filter: blur(12px);
@@ -207,14 +177,8 @@ body {
 .dashboard-card:nth-child(4) { animation-delay: 0.4s; }
 
 @keyframes cardFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .dashboard-card:hover {
@@ -240,11 +204,8 @@ body {
     gap: 8px;
 }
 
-.card-header h3 i {
-    color: #8b5cf6;
-}
+.card-header h3 i { color: #8b5cf6; }
 
-/* Video Card */
 .video-container {
     position: relative;
     width: calc(100% - 32px);
@@ -314,7 +275,6 @@ body {
     50% { opacity: 0.6; }
 }
 
-/* Gráfico */
 .chart-container {
     padding: 10px 16px 6px 16px;
     height: 200px;
@@ -366,7 +326,6 @@ body {
     color: #c084fc;
 }
 
-/* KPI Card */
 .kpi-grid {
     display: flex;
     gap: 12px;
@@ -438,7 +397,6 @@ body {
     color: #94a3b8;
 }
 
-/* Botões com glow */
 .controls-group {
     display: flex;
     gap: 10px;
@@ -460,8 +418,6 @@ body {
     justify-content: center;
     gap: 8px;
     font-family: 'Inter', sans-serif;
-    position: relative;
-    overflow: hidden;
 }
 
 .btn-primary {
@@ -519,7 +475,6 @@ button:disabled {
     gap: 8px;
 }
 
-/* ========== RELATÓRIO PREMIUM - COMPRIMIDO PARA 1 FOLHA ========== */
 .relatorio-premium {
     display: none;
     margin-top: 24px;
@@ -528,30 +483,22 @@ button:disabled {
     border-radius: 32px;
     border: 1px solid rgba(139, 92, 246, 0.35);
     overflow: visible;
-    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease;
     animation: slideUpPremium 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    /* Força a ficar em uma única folha */
     break-inside: avoid;
     page-break-inside: avoid;
 }
 
 @keyframes slideUpPremium {
-    from {
-        opacity: 0;
-        transform: translateY(60px) scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    from { opacity: 0; transform: translateY(60px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .relatorio-inner {
     padding: 20px 28px;
 }
 
-/* Cabeçalho moderno - reduzido */
 .relatorio-header-premium {
     display: flex;
     justify-content: space-between;
@@ -594,14 +541,12 @@ button:disabled {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    letter-spacing: -0.3px;
 }
 
 .report-subtitle {
     font-size: 0.7rem;
     color: #94a3b8;
     margin-top: 4px;
-    letter-spacing: 0.3px;
 }
 
 .report-id-badge {
@@ -617,7 +562,6 @@ button:disabled {
     border: 1px solid rgba(139, 92, 246, 0.4);
 }
 
-/* Grid de informações - reduzido */
 .info-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -674,7 +618,6 @@ button:disabled {
     margin-top: 2px;
 }
 
-/* Seção título - reduzido */
 .section-title {
     display: flex;
     align-items: center;
@@ -696,7 +639,6 @@ button:disabled {
     margin: 0;
 }
 
-/* Cards de resumo emocional - reduzido */
 .emotion-summary-cards {
     display: flex;
     gap: 16px;
@@ -781,7 +723,6 @@ button:disabled {
     color: #cbd5e1;
 }
 
-/* Distribuição detalhada moderna - mais compacta */
 .distribuicao-grid-modern {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -832,7 +773,6 @@ button:disabled {
     font-size: 0.7rem;
 }
 
-/* Análise glass card - reduzido */
 .analysis-glass-card {
     background: rgba(15, 25, 45, 0.6);
     backdrop-filter: blur(12px);
@@ -861,7 +801,6 @@ button:disabled {
     z-index: 1;
 }
 
-/* Recomendação premium - reduzido */
 .recommendation-premium-box {
     background: linear-gradient(125deg, rgba(251, 146, 60, 0.1), rgba(234, 179, 8, 0.05));
     border-radius: 20px;
@@ -908,7 +847,6 @@ button:disabled {
     margin-top: 4px;
 }
 
-/* Rodapé - reduzido */
 .signature-area-premium {
     margin-top: 16px;
     border-top: 1px solid rgba(139, 92, 246, 0.25);
@@ -961,7 +899,6 @@ button:disabled {
     filter: brightness(1.05);
 }
 
-/* Responsividade */
 @media (max-width: 1000px) {
     .info-cards-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -989,17 +926,6 @@ button:disabled {
     }
 }
 
-/* Animações extras */
-@keyframes fadeSlide {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.distribuicao-grid-modern .emotion-tag {
-    animation: fadeSlide 0.3s ease backwards;
-}
-
-/* Responsive */
 @media (max-width: 900px) {
     .dashboard-grid {
         grid-template-columns: 1fr;
@@ -1009,7 +935,6 @@ button:disabled {
     }
 }
 
-/* IMPRESSÃO - FORÇA TUDO EM 1 FOLHA */
 @media print {
     body {
         background: white;
@@ -1027,7 +952,6 @@ button:disabled {
         padding: 0;
         border: none;
         box-shadow: none;
-        /* Força a não quebrar */
         break-inside: avoid;
         page-break-inside: avoid;
         page-break-before: avoid;
@@ -1081,7 +1005,6 @@ button:disabled {
     .footer-left, .rec-footer-tag {
         color: #666;
     }
-    /* Garantia de 1 página */
     html, body {
         height: auto;
         overflow: visible;

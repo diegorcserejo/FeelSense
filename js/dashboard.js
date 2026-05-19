@@ -1,4 +1,3 @@
-// Lógica com animações e efeitos
 const video = document.getElementById('webcam-video');
 const canvas = document.getElementById('hidden-canvas');
 const context = canvas.getContext('2d');
@@ -12,7 +11,6 @@ const overlayCanvas = document.getElementById('overlay-canvas');
 const overlayContext = overlayCanvas.getContext('2d');
 const printRelatorioBtn = document.getElementById('print-relatorio-btn');
 
-// Elementos do relatório
 const relatorioPessoa = document.getElementById('relatorio-pessoa');
 const relatorioData = document.getElementById('relatorio-data');
 const relatorioDuracao = document.getElementById('relatorio-duracao');
@@ -29,7 +27,6 @@ const relatorioRecomendacoes = document.getElementById('relatorio-recomendacoes'
 const relatorioGeracao = document.getElementById('relatorio-geracao');
 const signatureContainer = document.getElementById('signature-container');
 
-// KPIs
 const kpiSamples = document.getElementById('kpi-samples');
 const kpiEngagement = document.getElementById('kpi-engagement');
 const kpiDominant = document.getElementById('kpi-dominant');
@@ -41,7 +38,6 @@ let analysisInterval = null;
 let startTime = null;
 let stream = null;
 
-// Criar partículas
 function createParticles() {
     const container = document.getElementById('particles');
     for (let i = 0; i < 60; i++) {
@@ -85,7 +81,6 @@ async function startWebcam() {
         liveBadge.style.background = '#22c55e';
         liveBadge.style.color = 'black';
         emotionResult.innerHTML = '<i class="fas fa-chart-line"></i> Análise em tempo real ativada';
-        emotionResult.style.animation = 'none';
         analysisInterval = setInterval(sendFrame, 1800);
     } catch (err) { emotionResult.innerHTML = "<i class='fas fa-exclamation-triangle'></i> Erro na webcam"; }
 }
@@ -113,7 +108,6 @@ async function sendFrame() {
         overlayContext.strokeRect(x, y, w, h);
         overlayContext.fillStyle = '#c084fc';
         overlayContext.font = 'bold 18px Inter';
-        overlayContext.shadowBlur = 0;
         overlayContext.fillText(data.emocao_dominante_pt, x, y - 8);
     }
     const engajamento = calcularIndiceEngajamento(data.emocoes_detalhadas);
@@ -190,42 +184,54 @@ function generateRelatorio() {
     relatorioGeracao.textContent = now.toLocaleString('pt-BR');
     relatorioAmostras.textContent = total;
     if(startTime) { let diff = Math.floor((now-startTime)/1000); relatorioDuracao.textContent = `${Math.floor(diff/60)}m ${diff%60}s`; }
-    relatorioPredominante.textContent = pred; relatorioPredominantePerc.textContent = `${predVal.toFixed(1)}%`;
-    relatorioSecundaria.textContent = sec; relatorioSecundariaPerc.textContent = secVal > 0 ? `${secVal.toFixed(1)}%` : 'N/A';
-    relatorioMenosFrequente.textContent = least; relatorioMenosFrequentePerc.textContent = `${leastVal.toFixed(1)}%`;
+    relatorioPredominante.textContent = pred;
+    relatorioPredominantePerc.textContent = `${predVal.toFixed(1)}%`;
+    document.getElementById('predominante-fill').style.width = `${predVal}%`;
+    relatorioSecundaria.textContent = sec;
+    relatorioSecundariaPerc.textContent = secVal > 0 ? `${secVal.toFixed(1)}%` : 'N/A';
+    document.getElementById('secundaria-fill').style.width = `${secVal}%`;
+    relatorioMenosFrequente.textContent = least;
+    relatorioMenosFrequentePerc.textContent = `${leastVal.toFixed(1)}%`;
+    document.getElementById('menos-fill').style.width = `${leastVal}%`;
     
     let distHTML = '';
-    sorted.forEach(([emo, perc]) => { distHTML += `<div class="dist-item"><strong>${emo}</strong> ${perc.toFixed(1)}%</div>`; });
+    sorted.forEach(([emo, perc]) => {
+        const iconMap = { 'Feliz': 'fa-smile', 'Triste': 'fa-frown', 'Neutro': 'fa-meh', 'Raiva': 'fa-angry', 'Medo': 'fa-flushed', 'Surpresa': 'fa-surprise', 'Nojo': 'fa-tired' };
+        const icon = iconMap[emo] || 'fa-face-smile';
+        distHTML += `<div class="emotion-tag"><span class="emotion-name"><i class="fas ${icon}"></i> ${emo}</span><span class="emotion-percent">${perc.toFixed(1)}%</span></div>`;
+    });
     relatorioDistribuicao.innerHTML = distHTML;
     
     let analysisText = `A emoção predominante foi ${pred} (${predVal.toFixed(1)}% média). `;
-    if(pred === 'Feliz') analysisText += "Indica engajamento positivo e bem-estar durante a sessão.";
-    else if(pred === 'Neutro') analysisText += "Revela estado de concentração ou resposta contida.";
-    else if(pred === 'Triste') analysisText += "Pode sinalizar desânimo, importante considerar contexto.";
-    else analysisText += "Monitoramento completo disponível para suporte emocional.";
-    relatorioAnalise.innerHTML = analysisText;
-    relatorioRecomendacoes.innerHTML = "• Continue promovendo ambiente acolhedor.<br>• Utilize os dados para ajustar estratégias de engajamento.<br>• Aconselhamento preventivo conforme frequência emocional.";
+    if(pred === 'Feliz') analysisText += "Indica engajamento positivo e bem-estar durante a sessão, sugerindo uma experiência agradável.";
+    else if(pred === 'Neutro') analysisText += "Revela estado de concentração ou resposta contida, podendo indicar foco ou neutralidade emocional.";
+    else if(pred === 'Triste') analysisText += "Pode sinalizar desânimo, importante considerar contexto e oferecer suporte emocional.";
+    else if(pred === 'Raiva') analysisText += "Sugere irritabilidade ou frustração, recomendando abordagem cuidadosa.";
+    else if(pred === 'Medo') analysisText += "Indica ansiedade ou apreensão, necessitando ambiente seguro.";
+    else analysisText += "Monitoramento completo disponível para suporte emocional contínuo.";
     
-    signatureContainer.innerHTML = `<div style="font-family:'Brush Script MT';font-size:26px;background:linear-gradient(135deg,#c084fc,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent;">Dr. FeelSense IA</div><div>Analista do Sistema | CRM/Digital: FSE-2026</div>`;
+    relatorioAnalise.innerHTML = analysisText;
+    
+    let recText = "• Continue promovendo ambiente acolhedor e positivo.<br>• Utilize os dados para ajustar estratégias de engajamento.<br>• Aconselhamento preventivo conforme frequência emocional identificada.";
+    if(pred === 'Triste' || pred === 'Raiva') recText = "• Recomenda-se acolhimento imediato.<br>• Estratégias de regulação emocional são sugeridas.<br>• Acompanhamento sistemático indicado.";
+    if(pred === 'Feliz') recText = "• Manter ambiente positivo e reforçar comportamentos.<br>• Aumentar desafios para manter engajamento.<br>• Celebrar resultados positivos.";
+    
+    relatorioRecomendacoes.innerHTML = recText;
+    
+    signatureContainer.innerHTML = `<div style="font-family:'Brush Script MT', cursive; font-size:26px; background:linear-gradient(135deg,#c084fc,#8b5cf6); -webkit-background-clip:text; background-clip:text; color:transparent;">Dr. FeelSense IA</div><div style="font-size:11px; color:#94a3b8;">Analista do Sistema | CRM/Digital: FSE-2026</div>`;
     relatorioContainer.style.display = 'block';
     relatorioContainer.scrollIntoView({ behavior: 'smooth' });
-    
-    // Animação extra
-    relatorioContainer.style.animation = 'none';
-    setTimeout(() => { relatorioContainer.style.animation = 'slideUp 0.5s ease'; }, 10);
 }
 
-// Event Listeners
 endAnalysisBtn.addEventListener('click', generateRelatorio);
 startBtn.addEventListener('click', startWebcam);
 stopBtn.addEventListener('click', stopAnalysis);
 printRelatorioBtn.addEventListener('click', () => window.print());
 
-// Inicialização
 window.addEventListener('load', () => {
     createParticles();
     setTimeout(() => {
-        let nome = prompt("Nome para o relatório:", "Pessoa 1");
-        if(nome) relatorioPessoa.textContent = nome;
+        let nome = prompt("Nome para o relatório:", "Usuário FeelSense");
+        if(nome && nome.trim()) relatorioPessoa.textContent = nome;
     }, 500);
 });
