@@ -511,38 +511,54 @@ button:disabled {
     padding: 10px 16px;
 }
 
-/* CABEÇALHO - REDUZIDO */
+/* ========== RELATÓRIO PREMIUM - EXTREMO ========== */
+.relatorio-premium {
+    display: none;
+    margin-top: 8px;
+    background: linear-gradient(145deg, rgba(18, 25, 45, 0.95), rgba(12, 18, 32, 0.98));
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.relatorio-inner {
+    padding: 8px 12px;
+}
+
+/* CABEÇALHO - MÍNIMO */
 .relatorio-header-premium {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 6px;
-    margin-bottom: 8px;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
     border-bottom: 1px solid rgba(139, 92, 246, 0.3);
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 4px;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .report-icon-glow {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
     background: linear-gradient(135deg, #6366f1, #c084fc);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+    font-size: 10px;
+    box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
 }
 
 .relatorio-header-premium h2 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 700;
     background: linear-gradient(120deg, #fff, #c084fc, #a78bfa);
     background-clip: text;
@@ -552,109 +568,109 @@ button:disabled {
 }
 
 .report-subtitle {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     color: #94a3b8;
-    margin-top: 1px;
+    margin-top: 0px;
 }
 
 .report-id-badge {
     background: rgba(139, 92, 246, 0.2);
-    padding: 3px 8px;
-    border-radius: 40px;
+    padding: 2px 6px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     font-weight: 600;
-    font-size: 0.55rem;
+    font-size: 0.45rem;
     border: 1px solid rgba(139, 92, 246, 0.4);
     color: #c084fc;
 }
 
 .report-id-badge i {
-    font-size: 0.55rem;
+    font-size: 0.45rem;
 }
 
-/* INFO CARDS - ULTRA COMPACTOS */
+/* INFO CARDS - MINIMALISTAS */
 .info-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    margin-bottom: 8px;
+    gap: 4px;
+    margin-bottom: 6px;
 }
 
 .info-card {
     background: rgba(30, 41, 59, 0.5);
-    border-radius: 12px;
-    padding: 4px 8px;
+    border-radius: 10px;
+    padding: 3px 6px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
 }
 
 .info-card-icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     background: linear-gradient(145deg, #6366f120, #8b5cf620);
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 8px;
     color: #c084fc;
 }
 
 .info-label {
-    font-size: 0.45rem;
+    font-size: 0.35rem;
     text-transform: uppercase;
     font-weight: 600;
     color: #94a3b8;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
 }
 
 .info-card-content strong {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
     font-weight: 700;
     color: #f1f5f9;
     display: block;
     margin-top: 0px;
 }
 
-/* SEÇÃO TÍTULO - REDUZIDA */
+/* SEÇÃO TÍTULO - MÍNIMA */
 .section-title {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin: 6px 0 4px 0;
+    gap: 4px;
+    margin: 4px 0 3px 0;
 }
 
 .section-title i {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
     color: #c084fc;
     background: rgba(139,92,246,0.2);
-    padding: 3px;
-    border-radius: 6px;
+    padding: 2px;
+    border-radius: 4px;
 }
 
 .section-title h3 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: #ffffff;
     margin: 0;
 }
 
-/* CARDS DE EMOÇÃO - ULTRA COMPACTOS */
+/* CARDS DE EMOÇÃO - MINIMALISTAS */
 .emotion-summary-cards {
     display: flex;
-    gap: 8px;
-    margin: 5px 0 8px 0;
+    gap: 5px;
+    margin: 4px 0 6px 0;
     flex-wrap: wrap;
 }
 
 .sum-card {
     flex: 1;
     background: rgba(20, 28, 45, 0.7);
-    border-radius: 14px;
-    padding: 6px;
+    border-radius: 10px;
+    padding: 4px;
     border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
@@ -664,21 +680,21 @@ button:disabled {
 }
 
 .sum-icon {
-    font-size: 14px;
+    font-size: 10px;
     color: #c084fc;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .sum-card span {
-    font-size: 0.45rem;
+    font-size: 0.4rem;
     font-weight: 600;
     text-transform: uppercase;
     color: #94a3b8;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
 }
 
 .sum-card strong {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 800;
     display: block;
     margin: 1px 0;
@@ -691,15 +707,15 @@ button:disabled {
 .perc-bar {
     height: 2px;
     background: rgba(255,255,255,0.1);
-    border-radius: 5px;
-    margin: 3px 0 2px;
+    border-radius: 3px;
+    margin: 2px 0 1px;
     overflow: hidden;
 }
 
 .perc-fill {
     height: 100%;
     background: linear-gradient(90deg, #8b5cf6, #c084fc);
-    border-radius: 5px;
+    border-radius: 3px;
     width: 0%;
     transition: width 0.5s ease;
 }
@@ -713,25 +729,25 @@ button:disabled {
 }
 
 .sum-card small {
-    font-size: 0.4rem;
+    font-size: 0.35rem;
     color: #cbd5e1;
 }
 
-/* DISTRIBUIÇÃO - ULTRA COMPACTA */
+/* DISTRIBUIÇÃO - MINIMALISTA */
 .distribuicao-grid-modern {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    gap: 3px;
     background: rgba(15, 23, 42, 0.5);
-    padding: 6px;
-    border-radius: 14px;
-    margin: 3px 0;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 2px 0;
 }
 
 .emotion-tag {
     background: rgba(99, 102, 241, 0.2);
-    border-radius: 30px;
-    padding: 3px 6px;
+    border-radius: 20px;
+    padding: 2px 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -741,14 +757,14 @@ button:disabled {
 .emotion-name {
     display: flex;
     align-items: center;
-    gap: 3px;
-    font-size: 0.55rem;
+    gap: 2px;
+    font-size: 0.45rem;
     color: #e2e8f0;
 }
 
 .emotion-name i {
-    width: 12px;
-    font-size: 0.5rem;
+    width: 10px;
+    font-size: 0.4rem;
     color: #c084fc;
 }
 
@@ -756,62 +772,62 @@ button:disabled {
     font-weight: 700;
     color: #e2e8f0;
     background: #1e293b;
-    padding: 1px 4px;
-    border-radius: 30px;
-    font-size: 0.5rem;
+    padding: 1px 3px;
+    border-radius: 20px;
+    font-size: 0.4rem;
 }
 
-/* ANÁLISE - ULTRA COMPACTA */
+/* ANÁLISE - MINIMALISTA */
 .analysis-glass-card {
     background: rgba(15, 25, 45, 0.6);
-    border-radius: 14px;
-    padding: 6px 12px;
-    margin: 5px 0;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 4px 0;
     position: relative;
     border: 1px solid rgba(139,92,246,0.25);
 }
 
 .analysis-quote-icon {
     position: absolute;
-    top: 4px;
-    right: 10px;
-    font-size: 16px;
+    top: 3px;
+    right: 8px;
+    font-size: 12px;
     color: rgba(139,92,246,0.2);
 }
 
 .analysis-text-premium {
-    font-size: 0.6rem;
-    line-height: 1.25;
+    font-size: 0.5rem;
+    line-height: 1.2;
     color: #e2e8f0;
     font-weight: 400;
     position: relative;
     z-index: 1;
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
-/* RECOMENDAÇÃO - ULTRA COMPACTA */
+/* RECOMENDAÇÃO - MINIMALISTA */
 .recommendation-premium-box {
     background: linear-gradient(125deg, rgba(251, 146, 60, 0.1), rgba(234, 179, 8, 0.05));
-    border-radius: 14px;
-    padding: 6px 12px;
-    margin: 5px 0 8px;
-    border-left: 3px solid #fb923c;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: 4px 0 6px;
+    border-left: 2px solid #fb923c;
 }
 
 .rec-header {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-bottom: 3px;
+    gap: 4px;
+    margin-bottom: 2px;
 }
 
 .rec-header i {
-    font-size: 12px;
+    font-size: 9px;
     color: #fbbf24;
 }
 
 .rec-header h4 {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
     font-weight: 700;
     margin: 0;
     color: #fed7aa;
@@ -819,60 +835,60 @@ button:disabled {
 
 .recommendation-premium-box p {
     color: #fde68a;
-    line-height: 1.25;
-    font-size: 0.55rem;
-    margin-bottom: 4px;
+    line-height: 1.2;
+    font-size: 0.45rem;
+    margin-bottom: 3px;
 }
 
 .rec-footer-tag {
-    font-size: 0.45rem;
+    font-size: 0.35rem;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     color: #94a3b8;
     border-top: 1px solid rgba(251,146,60,0.3);
-    padding-top: 3px;
-    margin-top: 2px;
+    padding-top: 2px;
+    margin-top: 1px;
 }
 
+/* RODAPÉ - MÍNIMO */
 .report-footer-premium {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-    padding-top: 6px;
+    gap: 5px;
+    margin-top: 5px;
+    padding-top: 4px;
     border-top: 1px solid rgba(139, 92, 246, 0.25);
 }
 
 .footer-left {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 0.5rem;
+    gap: 3px;
+    font-size: 0.4rem;
     color: #94a3b8;
 }
 
 .print-premium-btn {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
     border: none;
-    padding: 3px 10px;
-    border-radius: 30px;
+    padding: 2px 8px;
+    border-radius: 20px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 0.55rem;
+    gap: 3px;
+    font-size: 0.45rem;
     transition: 0.2s;
 }
 
 .print-premium-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(99,102,241,0.5);
-    filter: brightness(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(99,102,241,0.4);
 }
 
 /* RESPONSIVIDADE */
@@ -887,7 +903,7 @@ button:disabled {
 
 @media (max-width: 780px) {
     .relatorio-inner {
-        padding: 8px;
+        padding: 6px;
     }
     .emotion-summary-cards {
         flex-direction: column;
@@ -900,7 +916,7 @@ button:disabled {
     }
 }
 
-/* IMPRESSÃO - MANTÉM CORES E FORÇA 1 FOLHA */
+/* IMPRESSÃO - FORÇA 1 FOLHA */
 @media print {
     body {
         background: white;
@@ -925,10 +941,9 @@ button:disabled {
     }
     
     .relatorio-inner {
-        padding: 6px 10px !important;
+        padding: 4px 8px !important;
     }
     
-    /* MANTÉM TODAS AS CORES */
     .logo-text h1, .relatorio-header-premium h2, .sum-card strong {
         background: linear-gradient(135deg, #6366f1, #c084fc) !important;
         -webkit-background-clip: text !important;
@@ -948,15 +963,7 @@ button:disabled {
     
     .recommendation-premium-box {
         background: linear-gradient(125deg, rgba(251, 146, 60, 0.15), rgba(234, 179, 8, 0.08)) !important;
-        border-left: 3px solid #fb923c !important;
-    }
-    
-    .analysis-text-premium, .emotion-name, .emotion-percent {
-        color: #e2e8f0 !important;
-    }
-    
-    .recommendation-premium-box p {
-        color: #fde68a !important;
+        border-left: 2px solid #fb923c !important;
     }
     
     html, body {
