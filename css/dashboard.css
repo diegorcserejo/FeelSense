@@ -475,7 +475,7 @@ button:disabled {
     gap: 8px;
 }
 
-/* ========== RELATÓRIO PREMIUM - FORÇADO EM 1 FOLHA ========== */
+/* ========== RELATÓRIO PREMIUM - COMPACTO COM CORES ORIGINAIS ========== */
 .relatorio-premium {
     display: none;
     margin-top: 16px;
@@ -484,19 +484,14 @@ button:disabled {
     border-radius: 24px;
     border: 1px solid rgba(139, 92, 246, 0.35);
     transition: all 0.4s ease;
-    /* FORÇA TUDO NA MESMA PÁGINA */
     page-break-inside: avoid;
     page-break-before: avoid;
     page-break-after: avoid;
     break-inside: avoid;
-    break-before: avoid;
-    break-after: avoid;
 }
 
 .relatorio-inner {
     padding: 12px 20px;
-    /* COMPRIME O CONTEÚDO */
-    max-height: none;
 }
 
 /* CABEÇALHO MAIS COMPACTO */
@@ -506,7 +501,7 @@ button:disabled {
     align-items: center;
     padding-bottom: 8px;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
     flex-wrap: wrap;
     gap: 8px;
 }
@@ -520,25 +515,46 @@ button:disabled {
 .report-icon-glow {
     width: 36px;
     height: 36px;
+    background: linear-gradient(135deg, #6366f1, #c084fc);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
 }
 
 .relatorio-header-premium h2 {
     font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, #fff, #c084fc, #a78bfa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     margin: 0;
 }
 
 .report-subtitle {
     font-size: 0.6rem;
+    color: #94a3b8;
     margin-top: 2px;
 }
 
 .report-id-badge {
+    background: rgba(139, 92, 246, 0.2);
+    backdrop-filter: blur(8px);
     padding: 4px 10px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
     font-size: 0.65rem;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    color: #c084fc;
 }
 
-/* INFO CARDS - MAIS COMPACTOS */
+/* INFO CARDS - MAIS COMPACTOS (CORES MANTIDAS) */
 .info-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -547,300 +563,418 @@ button:disabled {
 }
 
 .info-card {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 16px;
     padding: 6px 10px;
+    display: flex;
+    align-items: center;
     gap: 8px;
+    transition: all 0.25s;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .info-card-icon {
     width: 30px;
     height: 30px;
+    background: linear-gradient(145deg, #6366f120, #8b5cf620);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
+    color: #c084fc;
 }
 
 .info-label {
     font-size: 0.55rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #94a3b8;
 }
 
 .info-card-content strong {
     font-size: 0.75rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    display: block;
     margin-top: 0px;
 }
 
-/* SEÇÃO TÍTULO - MAIS COMPACTA */
+/* SEÇÃO TÍTULO */
 .section-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin: 8px 0 6px 0;
 }
 
 .section-title i {
     font-size: 0.9rem;
+    color: #c084fc;
+    background: rgba(139,92,246,0.2);
     padding: 4px;
+    border-radius: 8px;
 }
 
 .section-title h3 {
     font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
 }
 
-/* CARDS DE EMOÇÃO - MAIS COMPACTOS */
+/* CARDS DE EMOÇÃO - CORES ORIGINAIS */
 .emotion-summary-cards {
+    display: flex;
     gap: 10px;
     margin: 6px 0 10px 0;
+    flex-wrap: wrap;
 }
 
 .sum-card {
+    flex: 1;
+    background: rgba(20, 28, 45, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 18px;
     padding: 8px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.sum-card.primary {
+    background: linear-gradient(145deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.1));
+    border-left: 3px solid #c084fc;
 }
 
 .sum-icon {
     font-size: 18px;
+    color: #c084fc;
     margin-bottom: 4px;
 }
 
 .sum-card span {
     font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #94a3b8;
 }
 
 .sum-card strong {
     font-size: 1.1rem;
+    font-weight: 800;
+    display: block;
     margin: 2px 0;
+    background: linear-gradient(135deg, #fff, #e9d5ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .perc-bar {
     height: 3px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
     margin: 5px 0 3px;
+    overflow: hidden;
+}
+
+.perc-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #c084fc);
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.perc-fill.secondary-fill {
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.perc-fill.rare-fill {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
 }
 
 .sum-card small {
     font-size: 0.5rem;
+    color: #cbd5e1;
 }
 
-/* DISTRIBUIÇÃO - MAIS COMPACTA */
+/* DISTRIBUIÇÃO DETALHADA */
 .distribuicao-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+    background: rgba(15, 23, 42, 0.5);
     padding: 8px;
+    border-radius: 18px;
     margin: 4px 0;
 }
 
 .emotion-tag {
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 40px;
     padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    border: 1px solid rgba(139,92,246,0.3);
 }
 
 .emotion-name {
-    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
     gap: 4px;
+    font-size: 0.65rem;
+    color: #e2e8f0;
+}
+
+.emotion-name i {
+    width: 16px;
+    font-size: 0.6rem;
+    color: #c084fc;
 }
 
 .emotion-percent {
+    font-weight: 700;
+    color: #e2e8f0;
+    background: #1e293b;
     padding: 1px 6px;
+    border-radius: 40px;
     font-size: 0.6rem;
 }
 
-/* ANÁLISE GLASS - MAIS COMPACTA */
+/* ANÁLISE GLASS CARD */
 .analysis-glass-card {
+    background: rgba(15, 25, 45, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
     padding: 8px 16px;
     margin: 6px 0;
+    position: relative;
+    border: 1px solid rgba(139,92,246,0.25);
 }
 
 .analysis-quote-icon {
+    position: absolute;
     top: 6px;
     right: 12px;
     font-size: 22px;
+    color: rgba(139,92,246,0.2);
 }
 
 .analysis-text-premium {
     font-size: 0.7rem;
     line-height: 1.35;
+    color: #e2e8f0;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
 
-/* RECOMENDAÇÃO - MAIS COMPACTA */
+/* RECOMENDAÇÃO */
 .recommendation-premium-box {
+    background: linear-gradient(125deg, rgba(251, 146, 60, 0.1), rgba(234, 179, 8, 0.05));
+    border-radius: 18px;
     padding: 8px 16px;
     margin: 6px 0 10px;
+    border-left: 4px solid #fb923c;
 }
 
 .rec-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 4px;
 }
 
 .rec-header i {
     font-size: 16px;
+    color: #fbbf24;
 }
 
 .rec-header h4 {
     font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fed7aa;
 }
 
 .recommendation-premium-box p {
-    font-size: 0.65rem;
+    color: #fde68a;
     line-height: 1.3;
+    font-size: 0.65rem;
     margin-bottom: 6px;
 }
 
 .rec-footer-tag {
     font-size: 0.55rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(251,146,60,0.3);
     padding-top: 5px;
     margin-top: 3px;
 }
 
-/* ASSINATURA - MAIS COMPACTA */
+/* ASSINATURA */
 .signature-area-premium {
     margin-top: 8px;
+    border-top: 1px solid rgba(139, 92, 246, 0.25);
     padding-top: 8px;
 }
 
 .signature-line {
+    height: 1px;
+    background: linear-gradient(90deg, #8b5cf6, transparent);
+    width: 80px;
     margin-bottom: 6px;
 }
 
+.report-footer-premium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.6rem;
+    color: #94a3b8;
 }
 
 .print-premium-btn {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
     padding: 4px 14px;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.65rem;
+    transition: 0.2s;
 }
 
-/* ========== IMPRESSÃO - FORÇA TUDO EM 1 FOLHA ========== */
+.print-premium-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(99,102,241,0.5);
+    filter: brightness(1.05);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    .info-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .distribuicao-grid-modern {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 780px) {
+    .relatorio-inner {
+        padding: 10px;
+    }
+    .emotion-summary-cards {
+        flex-direction: column;
+    }
+    .info-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .distribuicao-grid-modern {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== IMPRESSÃO - MANTÉM AS CORES ORIGINAIS ========== */
 @media print {
-    /* Reset completo para impressão */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
     body {
-        background: white !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        height: auto !important;
-        overflow: visible !important;
+        background: white;
+        padding: 0;
+        margin: 0;
     }
     
-    /* Esconde tudo que não é o relatório */
+    /* Esconde apenas os elementos que não são do relatório */
     .particles-container, .animated-bg, .dashboard-grid, .controls-card, 
-    .back-home-btn, .header-stats, .header-premium .logo-area, 
-    .dashboard-card, .video-card, .chart-card, .kpi-card {
+    .back-home-btn, .header-stats, .video-card, .chart-card, .kpi-card,
+    .dashboard-card, .header-premium .logo-area {
         display: none !important;
     }
     
-    /* Mostra APENAS o relatório */
+    /* Mostra o relatório com as CORES ORIGINAIS */
     .relatorio-premium {
         display: block !important;
-        background: white !important;
-        color: black !important;
+        background: linear-gradient(145deg, rgba(18, 25, 45, 0.98), rgba(12, 18, 32, 1)) !important;
+        backdrop-filter: none !important;
         margin: 0 !important;
         padding: 0 !important;
-        border: none !important;
+        border: 1px solid #8b5cf6 !important;
         box-shadow: none !important;
-        position: relative !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: auto !important;
-        /* COMANDOS CRUCIAIS PARA 1 FOLHA */
         page-break-inside: avoid !important;
-        page-break-before: avoid !important;
-        page-break-after: avoid !important;
         break-inside: avoid !important;
-        break-before: avoid !important;
-        break-after: avoid !important;
     }
     
     .relatorio-inner {
-        padding: 5px 8px !important;
-        margin: 0 !important;
+        padding: 8px 12px !important;
     }
     
-    /* Remove todas as animações e fundos */
-    .relatorio-premium * {
-        background: white !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-        animation: none !important;
-        backdrop-filter: none !important;
+    /* MANTÉM TODAS AS CORES GRADIENTES */
+    .logo-text h1, .relatorio-header-premium h2, .sum-card strong {
+        background: linear-gradient(135deg, #6366f1, #c084fc) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        color: transparent !important;
     }
     
-    /* Ajusta cores para impressão */
-    .info-card, .sum-card, .emotion-tag, .analysis-glass-card, 
+    /* MANTÉM OS FUNDOS COLORIDOS */
+    .info-card, .sum-card, .emotion-tag, .analysis-glass-card {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border: 1px solid rgba(139, 92, 246, 0.3) !important;
+    }
+    
+    .sum-card.primary {
+        background: linear-gradient(145deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.2)) !important;
+        border-left: 3px solid #c084fc !important;
+    }
+    
     .recommendation-premium-box {
-        background: #f5f5f5 !important;
-        border: 1px solid #ddd !important;
-        color: black !important;
+        background: linear-gradient(125deg, rgba(251, 146, 60, 0.15), rgba(234, 179, 8, 0.08)) !important;
+        border-left: 4px solid #fb923c !important;
     }
     
-    .sum-card strong, .kpi-value, .logo-text h1 {
-        background: none !important;
-        color: black !important;
-        -webkit-background-clip: unset !important;
-        background-clip: unset !important;
+    /* MANTÉM AS CORES DOS TEXTOS */
+    .analysis-text-premium, .emotion-name, .emotion-percent {
+        color: #e2e8f0 !important;
     }
     
-    .analysis-text-premium, .recommendation-premium-box p {
-        color: #333 !important;
+    .recommendation-premium-box p {
+        color: #fde68a !important;
     }
     
-    /* Força o conteúdo a caber em uma página */
+    .info-label, .footer-left, .rec-footer-tag {
+        color: #94a3b8 !important;
+    }
+    
+    .report-id-badge {
+        background: rgba(139, 92, 246, 0.3) !important;
+        color: #c084fc !important;
+    }
+    
+    /* Força tudo em uma página */
     html, body {
         height: auto !important;
-        min-height: 0 !important;
-        max-height: none !important;
         overflow: visible !important;
     }
     
-    /* Remove quebras de página */
-    div, section, article, .dashboard-container, .relatorio-body {
+    div, section, article {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
-    }
-    
-    /* Tamanho da fonte ligeiramente menor na impressão */
-    .analysis-text-premium {
-        font-size: 0.68rem !important;
-    }
-    
-    .emotion-name {
-        font-size: 0.6rem !important;
-    }
-    
-    .sum-card strong {
-        font-size: 1rem !important;
-    }
-       .emotion-tag {
-        background: #eee;
-        border: 1px solid #ccc;
-    }
-    .emotion-percent {
-        background: #ddd;
-        color: #333;
-    }
-    .analysis-glass-card {
-        background: #f9f9f9;
-        border: 1px solid #ccc;
-    }
-    .analysis-text-premium {
-        color: #333;
-    }
-    .recommendation-premium-box {
-        background: #fef3e8;
-        border-left: 4px solid #fb923c;
-    }
-    .recommendation-premium-box p {
-        color: #333;
-    }
-    .report-id-badge {
-        background: #eee;
-        border: 1px solid #ccc;
-        color: #333;
-    }
-    .footer-left, .rec-footer-tag {
-        color: #666;
-    }
-    html, body {
-        height: auto;
-        overflow: visible;
-    }
-    .dashboard-container {
-        max-width: 100%;
     }
 }
