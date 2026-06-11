@@ -399,6 +399,25 @@ body {
     box-shadow: 0 10px 25px rgba(99,102,241,0.4);
 }
 
+/* Responsive e menu hambúrguer */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; position: absolute; top: 70px; right: 5%; background: rgba(10,15,28,0.95); padding: 12px; border-radius: 12px; flex-direction: column; gap: 8px; min-width: 180px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .nav-links.open { display: flex; }
+    .nav-link { padding: 8px 12px; }
+    .hero-solucoes { padding: 100px 5% 40px; }
+    .solucoes-grid { padding: 20px 5% 60px; grid-template-columns: 1fr; gap: 20px; }
+}
+
 /* Footer */
 .footer {
     background: #0a0f1c;

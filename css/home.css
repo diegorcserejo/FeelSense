@@ -399,6 +399,27 @@ body {
     50% { transform: translateY(-15px); }
 }
 
+/* Responsive e menu hambúrguer */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; position: absolute; top: 70px; right: 5%; background: rgba(10,15,28,0.95); padding: 12px; border-radius: 12px; flex-direction: column; gap: 8px; min-width: 180px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .nav-links.open { display: flex; }
+    .nav-link { padding: 8px 12px; }
+    .hero { padding: 100px 5% 40px; flex-direction: column; gap: 24px; }
+    .hero-title { font-size: 32px; text-align: center; }
+    .hero-description, .hero-buttons { text-align: center; }
+    .hero-visual { order: 2; width: 100%; height: auto; }
+    .hero-content { order: 1; width: 100%; }
+}
 .hero-sphere {
     position: absolute;
     width: 300px;

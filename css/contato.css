@@ -399,6 +399,26 @@ body {
     border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
+/* Responsive e menu hambúrguer */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; position: absolute; top: 70px; right: 5%; background: rgba(10,15,28,0.95); padding: 12px; border-radius: 12px; flex-direction: column; gap: 8px; min-width: 180px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .nav-links.open { display: flex; }
+    .nav-link { padding: 8px 12px; }
+    .contato-grid { grid-template-columns: 1fr; padding: 20px 5%; gap: 20px; }
+    .hero-contato { padding: 100px 5% 40px; }
+    .form-container { padding: 24px; }
+}
+
 .social-icon:hover {
     transform: translateY(-3px) scale(1.1);
 }

@@ -916,6 +916,24 @@ button:disabled {
     }
 }
 
+/* Ajustes adicionais para mobile (<=768px) */
+@media (max-width: 768px) {
+    body { padding: 10px 12px; }
+    .header-premium { flex-direction: column; align-items: stretch; gap: 10px; }
+    .logo-area { width: 100%; }
+    .header-stats { width: 100%; justify-content: space-between; }
+    .back-home-btn { align-self: flex-end; }
+    .dashboard-grid { grid-template-columns: 1fr; gap: 12px; }
+    .video-container { aspect-ratio: 4/3; margin: 6px 10px 0 10px; }
+    .chart-container { height: 140px; }
+    .kpi-grid { flex-direction: column; gap: 8px; }
+    .controls-group { flex-direction: column; }
+    .info-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .distribuicao-grid-modern { grid-template-columns: repeat(2, 1fr); }
+    .emotion-summary-cards { flex-direction: column; }
+    .print-premium-btn { padding: 6px 10px; }
+}
+
 /* IMPRESSÃO - FORÇA 1 FOLHA */
 @media print {
     body {
