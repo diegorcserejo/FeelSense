@@ -416,7 +416,8 @@ body {
     .nav-link { padding: 8px 12px; }
     .hero { padding: 100px 5% 40px; flex-direction: column; gap: 24px; }
     .hero-title { font-size: 32px; text-align: center; }
-    .hero-description, .hero-buttons { text-align: center; }
+    .hero-description { text-align: center; }
+    .hero-buttons { text-align: center; justify-content: center; }
     .hero-visual { order: 2; width: 100%; height: auto; }
     .hero-content { order: 1; width: 100%; }
 }

@@ -104,10 +104,20 @@ async function sendFrame() {
         const { x, y, w, h } = data.face_rect;
         overlayContext.strokeStyle = '#8b5cf6';
         overlayContext.lineWidth = 3;
+        // desenha retângulo normalmente (será espelhado via CSS junto com o canvas)
         overlayContext.strokeRect(x, y, w, h);
+        // desenhar o texto INVERSO no canvas para que, após o espelhamento CSS,
+        // o texto apareça legível (não espelhado).
         overlayContext.fillStyle = '#c084fc';
         overlayContext.font = 'bold 18px Inter';
-        overlayContext.fillText(data.emocao_dominante_pt, x, y - 8);
+        overlayContext.textBaseline = 'top';
+        // desenha texto invertido: aplica transformação temporária
+        overlayContext.save();
+        // espelha o contexto horizontalmente ao redor da largura do canvas
+        overlayContext.setTransform(-1, 0, 0, 1, overlayCanvas.width, 0);
+        // após setTransform, o novo X para corresponder ao X original é (overlayCanvas.width - x)
+        overlayContext.fillText(data.emocao_dominante_pt, overlayCanvas.width - x, y - 8);
+        overlayContext.restore();
     }
     const engajamento = calcularIndiceEngajamento(data.emocoes_detalhadas);
     emotionResult.innerHTML = `<i class="fas fa-smile"></i> Dominante: ${data.emocao_dominante_pt} | Engajamento: ${engajamento.indice}% (${engajamento.interpretacao})`;

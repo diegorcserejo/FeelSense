@@ -227,6 +227,19 @@ body {
     border-radius: 14px;
 }
 
+/* Espelhar horizontalmente apenas a câmera (vídeo) e o canvas de overlay.
+   O texto será desenhado invertido no canvas via JS para ficar legível. */
+#webcam-video, #overlay-canvas {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+/* Espelhar horizontalmente a câmera e o overlay para efeito 'mirror' */
+#webcam-video, #overlay-canvas {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
 .scan-line {
     position: absolute;
     top: 0;
