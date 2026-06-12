@@ -154,6 +154,39 @@ body {
     transform: translateY(-2px);
 }
 
+/* Modifique a classe do card para gerenciar o espaço interno */
+.dashboard-card.chart-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Atualize o container do gráfico para crescer e ocupar o espaço vazio */
+.chart-container {
+    padding: 10px 16px 6px 16px;
+    flex: 1;             /* Faz o container crescer ocupando o espaço vazio */
+    min-height: 260px;   /* Garante uma altura mínima confortável */
+    position: relative;  /* Importante para o comportamento responsivo do Chart.js */
+}
+
+/* Garante que o canvas preencha o container expandido */
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Mantém o insight colado na parte inferior de forma consistente */
+.insight-mini {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.1));
+    margin: auto 16px 16px 16px; /* O 'auto' no top joga o insight sempre para o rodapé */
+    padding: 10px 16px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 4px solid #8b5cf6;
+}
+
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
